@@ -22,7 +22,7 @@
             	<h1>Advanced Visual Framwork API Deployment</h1>
              </div>
              <div data-role="content">
-             	<p>Welcome to my demo app where I show off the use of a few API's and Native features.  This version is for Android system.  For the iOS version please click the apple logo.</p>
+             	<p>Welcome to my demo app where I show off the use of a few API's and Native features.  This version is for iOS systems.  For the Android version please visit the following page.</p>
                 <a href="http://malion.github.io/AVFAndroidDemo/assets/www/"><img alt="Android Robot" src="img/Android_robot.png" height="124px" width="100px" /></a>
              	<div data-role="collapsible-set" data-theme="a">
              		<div data-content-theme="b" data-role="collapsible" data-theme="a">
@@ -58,9 +58,10 @@
                 	</div>
                 </div>
                 <div>
-                	<a href="#camera">Camera</a>
-                    <br />
-                    <a href="#geo">Geolocation</a>
+                	<ul data-role="listview" data-inset="true">
+                    	<li><a href="#camera"><h3>Camera</h3></a></li>
+                        <li><a href="#geo"><h3>Geolocation</h3></a></li>
+                    </ul>
                 </div>
              </div>
              <div data-role="footer" data-position="fixed" data-id="nav">
@@ -149,7 +150,6 @@
             </div>
             <div data-role="content">
             	<div data-role="listview" data-inset="true">
-                	<button id="picturebtn">Take Picture</button>
 					<img id="cameraImage" style="height:auto; width:100%" />
                 </div>
             </div>
