@@ -19,7 +19,7 @@
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "io.cordova.helloCordova"
-        version   = "2.0.0">
+        version   = "2.5.0">
     <name>Hello Cordova</name>
 
     <description>
@@ -65,6 +65,7 @@
     <feature name="Camera">
       <param name="android-package" value="org.apache.cordova.CameraLauncher"/>
     </feature>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="Contacts">
       <param name="android-package" value="org.apache.cordova.ContactManager"/>
     </feature>
@@ -103,5 +104,6 @@
     </feature>
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
+		<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
     </plugins>
 </widget>
