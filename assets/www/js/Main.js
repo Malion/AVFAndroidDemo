@@ -77,9 +77,8 @@ $("#flickr").on('pageinit', function(){
 	});
 	$('#flickrRefresh').on('click', function(){window.location.reload(true)})
 })
-$('#picturebtn').on('click',function(){	
-		alert("you pushed my button!")
-		navigator.camera.getPicture(success, fail, { quality: 10,destinationType: Camera.DestinationType.DATA_URL});
+$(document).on('pageinit', '#camera', function(){
+		navigator.camera.getPicture(success, fail, { quality: 50,destinationType: Camera.DestinationType.DATA_URL});
 		function success(data) {
     		var image = document.getElementById('cameraImage');
     		image.src = "data:image/jpeg;base64," + data;
@@ -99,14 +98,10 @@ $('#geobtn').on('click', function(){
 	          'Speed: '             + position.coords.speed             + '\n' +
 	          'Timestamp: '         + position.timestamp                + '\n');
 		};
-
-		// onError Callback receives a PositionError object
-
 		function onError(error) {
     		alert('code: '    + error.code    + '\n' +
          	 	'message: ' + error.message + '\n');
 		}
-
 		navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000,
 			timeout: 5000, enableHighAccuracy: true});
 })
