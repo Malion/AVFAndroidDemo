@@ -169,7 +169,14 @@
             	<h1>Geolocation</h1>
             </div>
             <div data-role="content">
-            <button id="geobtn">Geolocation</button>
+            <ul data-role="listview" id="geolist">
+            	<li data-theme="none">
+                	<button id="geobtn">Geolocation</button>
+            	</li>
+                <li data-theme="none" style="display:block; margin-right:auto; margin-left:auto">
+                	<div id="geoframe" style="display:none; height:512px; width:500px"></div>
+            	</li>
+            </ul>
             </div>
             <div data-role="footer" data-position="fixed" data-id="nav">
 				<div data-role="navbar">
@@ -183,6 +190,7 @@
         	</div>
         </div>
         <!-- For use when I have internet at home -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         <script src="cordova.js"></script>
         <script src="js/libs/modernizr.custom.min.js"></script>
 		<script type="text/javascript" src="js/storage.js"></script>
